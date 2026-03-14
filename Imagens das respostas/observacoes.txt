@@ -1,0 +1,42 @@
+Objetivo criar uma assistente de IA para o suporte técnico que auxilie a utilizar softwares
+
+Adicionei os seguintes arquivos:
+Adobe - criado baseado nas paginas do site com informações sobre a utilização das ferramentas 
+Com a ajuda do Gemini criei os seguintes arquivos:
+Ecossistema Microsoft 365 Corporativo - Com informações sobre a sua utilização 
+Hardware e Troubleshooting - Com informações sobre hardware gerar e dicas para diagnosticos de hardware e softwares
+Linux - Com informações básicas de utilização do Linux
+Windows - Com informações sobre a utilização e gerenciamento do Windows 
+
+Após isso os documentos foram ajustados para remover tabelas e passerem informações coentes
+Após isso criei um arquivo para gerar o banco de dados e realizar a RAG nele
+
+Para fazer a rag utilizei a biblioteca langchain_chroma 
+
+Para a interface e api utilizei o streamlit 
+
+Utilizo o LM studio com uma llm rodando local 
+Escolhi o modelo lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF
+Quantization: Q4_K_M
+Pois é um modelo menor e com isso consigo rodar de forma mais rapida na minha maquina 
+
+Para vetorizar os embadings escolhi o modelo sentence-transformers/all-MiniLM-L6-v2, pois é leve e  rapido.
+Utilizei a biblioteca do Hugging face para usar o modelo. 
+
+
+Após isso testei o modelo, na sequencia vou deixar algumas imagens com as perguntas e as respostas obtidas 
+
+```
+RAG_IA/
+├─ banco_de_dados/           # Persistência do Chroma (vetores)
+├─ dados_para_IA/            # PDFs e manuais utilizados como base de conhecimento
+               # Funções de backend
+│   └─ conexao_lm_studio.py  # Conexão com o LM Studio local
+├─ src/
+│   ├─ services/  
+│   ├─ criar_bd.py           # Script para gerar o banco de dados vetorial
+│   ├─ main.py               # Interface principal em Streamlit
+│   └─ script_prompt_ia.py   # Templates de prompt para RAG
+├─ README.md                 # Documentação do projeto
+└─ requirements.txt          # Dependências do projeto
+```

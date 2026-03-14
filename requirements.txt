@@ -1,0 +1,25 @@
+# Framework de Orquestração e RAG
+langchain
+langchain-core
+langchain-community
+langchain-chroma
+langchain-huggingface
+
+# Banco Vetorial
+chromadb
+
+# Modelos de Embedding
+sentence-transformers
+
+# Processamento de documentos
+pypdf
+
+# Interface
+streamlit
+
+# Integração com LLM local (LM Studio)
+openai
+requests
+
+# Variáveis de ambiente
+python-dotenv

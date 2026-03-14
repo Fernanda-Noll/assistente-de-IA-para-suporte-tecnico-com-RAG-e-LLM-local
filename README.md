@@ -261,9 +261,11 @@ streamlit run src/main.py
 
 Abaixo estão alguns exemplos de perguntas feitas ao sistema e as respostas geradas.
 
+<img src="Imagens das respostas/assinar documento salvo em pdf.png" alt="Imagem como assinar um documento salvo em PDF">
 
+<img src="Imagens das respostas/computador lento.png" alt="Imagem computador está lento">
 
-
+<img src="Imagens das respostas/outlook.png" alt="Imagem dúvida sobre o Outlook">
 
 ---
 
